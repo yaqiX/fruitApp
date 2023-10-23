@@ -1,3 +1,5 @@
+import { Int32 } from 'mongodb';
+
 const mongoose = require('mongoose');
 
 // create schema (breakdown of what our data should look like)
@@ -5,7 +7,8 @@ const fruitSchema = new mongoose.Schema(
     {
         name: String,
         color: String,
-        ready: Boolean
+        ready: Boolean,
+        age: Number
     },
     {
         timestamps: true
