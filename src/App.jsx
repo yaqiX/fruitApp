@@ -3,6 +3,8 @@ import './App.css'
 import { Link, Route, Routes } from 'react-router-dom'
 import CreateFruits from './pages/CreateFruits'
 import Fruits from './pages/Fruits'
+import CreateVeggies from './pages/CreateVeggies'
+import Veggies from './pages/Veggies'
 
 function App() {
 
@@ -16,13 +18,21 @@ function App() {
         <Link to="/create">
           <button>Create</button>
         </Link>
+        <Link to="/veggies">
+          <button>Veggies</button>
+        </Link>
+        <Link to="/veggies/create">
+          <button>Create New Veggie</button>
+        </Link>
       </nav>
       <Routes>
         <Route path="/" element={<Fruits />}></Route>
         <Route path="/create" element={<CreateFruits />}></Route>
+        <Route path="/veggies" element={<Veggies />}></Route>
+        <Route path="/veggies/create" element={<CreateVeggies />}></Route>
       </Routes>
     </div>
   )
 }
 
-export default App
+export default App;
